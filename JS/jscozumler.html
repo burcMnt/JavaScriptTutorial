@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body id="body">
+
+    <div>
+
+        <label for="" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Numbers</label>
+        <input type="text" name="" id="sayi1">
+        <input type="text" name="" id="sayi2">
+    </div>
+
+    <div style="margin-left: 75px; margin-top: 20px;">
+
+        <button onclick="sum()">SUM</button>
+        <button onclick="sub()">SUB</button>
+        <button onclick="div()">DIV</button>
+        <button onclick="multiply()">MULT</button>
+
+    </div>
+
+
+    <div style="margin-top: 20px;">
+
+        <h2 style="margin-bottom: 10px;">Countries With City</h2>
+
+        <table id="country">
+            <tr>
+                <th>Country</th>
+                <th>City</th>
+            </tr>
+            <tr>
+                <td>Turkey</td>
+                <td>İstanbul</td>
+            </tr>
+            <tr>
+                <td>England</td>
+                <td>London</td>
+            </tr>
+            <tr>
+                <td>France</td>
+                <td>Paris</td>
+            </tr>
+            <tr>
+                <td>Scotland</td>
+                <td>Edinburg</td>
+            </tr>
+            <tr>
+                <td>Germany</td>
+                <td>Berlin</td>
+            </tr>
+            <tr>
+                <td>Ireland</td>
+                <td>Dublin</td>
+            </tr>
+
+
+        </table>
+
+        <div>
+
+            <button onclick="deleteRow()">Delete 3.Row From Table</button>
+        </div>
+
+    </div>
+
+
+    <div style="margin-top: 25px;">
+
+        <button id="btn" onclick="changeWidth()">Change My Size</button>
+    </div>
+
+
+    <div style="margin-top: 25px;">
+
+        <label for="" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Color
+            Number</label>
+        <input type="text" name="" id="colorNo">
+    </div>
+
+    <div style="margin-top: 15px;">
+        <button onclick="changeColor()">Change Body Color With ColorNo</button>
+    </div>
+
+    <div style="margin-top: 15px;">
+        <button id="btn1" onclick="btnHide1()">Hide Me 1!</button>
+        <button id="btn2" onclick="btnHide2()">Hide Me 2!</button>
+        <button id="btn3" onclick="btnHide3()">Hide Me 3!</button>
+    </div>
+
+
+    <div>
+        <label id="l1" for="" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;"></label>
+        <label id="l2" for="" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;"></label>
+        <label id="l3" for="" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;"></label>
+        <label id="l4" for="" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;"></label>
+        <label id="l5" for="" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;"></label>
+        <label id="l6" for="" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;"></label>
+
+    </div>
+    <div style="margin-top: 15px;">
+        <button onclick="number()">Random number</button>
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>
+
+<script>
+    //1)Declerate one numeric,one sting and one boolean variable.
+    // (bir numeric, bir string, bir boolean değişken tanımla) 
+
+    var city = 'İstanbul';
+    var carId = 34;
+    var brandNew = true;
+
+    //2)Declerate two different array one of numeric type and other one string type ,which have five items.
+    // ( numeric ve string 5 elemanlı 2 dizi tanımla)
+    let students = ['Can', 'Su', 'Efe', 'Eda', 'Ali']
+
+    let studentsId = [10, 15, 20, 25, 30]
+
+    //3) Declerate an object which has name,unitPrice and stock property and fill it with items.
+    //(name, unitPrice, stock özellikleri olan bir obje tanımla ve objeyi doldur)
+
+    let AppleProduct = {
+        name: 'Iphone',
+        unitPrice: 12000,
+        stock: 150
+
+    }
+
+    //Define another five more object same like above question and push all of them into defined new array.
+    //4) yukarıdaki tanımladığın objeden 5 tane daha oluştur ve bir dizide push et
+
+    let mause = {
+        name: 'Trust mause',
+        unitPrice: 20,
+        stock: 100
+
+    }
+    let smartPhone = {
+        name: 'Samsung Galaxy',
+        unitPrice: 75,
+        stock: 200
+
+    }
+    let laptop = {
+        name: 'Asus NSeries',
+        unitPrice: 10000,
+        stock: 55
+    }
+    let tablet = {
+        name: 'IPad',
+        unitPrice: 50,
+        stock: 10
+    }
+    let cable = {
+        name: 'HDMI cable',
+        unitPrice: 10,
+        stock: 20
+    }
+
+    let electronicDevices = []
+    electronicDevices.push(mause);
+    electronicDevices.push(smartPhone);
+    electronicDevices.push(laptop);
+    electronicDevices.push(tablet);
+    electronicDevices.push(cable);
+
+    //Show on the console that how many items do you have in the defined new array? 
+    //5) oluşturduğun dizide kaç eleman var console a yazdır
+
+    console.log(electronicDevices.length);
+
+
+    // //Remove the last item of the defined array
+    // //6) oluşturduğun dizinin son elemanını çıkar
+
+    // electronicDevices.pop();
+    // console.log(electronicDevices);
+
+    // // Remove the first item of the defined array
+    // //7) oluşturduğun dizinin ilk elemanını çıkar
+    // electronicDevices.splice(0,1);
+    // console.log(electronicDevices);
+
+    //Find the item which is the 'name' property is equal to samsung in the defined array, and show on the console.
+    //8) oluşturduğun dizide name alanı 'samsung' olan elemanı bulup console yazdır ( js find komutu)
+    var elementSamsung = electronicDevices.find(x => x.name == 'Samsung Galaxy');
+    console.log(elementSamsung);
+
+    //Find the item(s) which is the 'unitPrice' property value is higher than 100 in the defined array, and show on the console.
+    //9) oluştrudğun dizide unitPrice 100 den büyük olanları ekrana yazdır ( js filter komutu )
+
+    for (i = 0; i < electronicDevices.length; i++) {
+
+        if (electronicDevices[i].unitPrice > 100) {
+            console.log(electronicDevices[i]);
+
+        }
+    }
+
+    var over100 = electronicDevices.filter(x => x.unitPrice > 100);
+    console.log(over100);
+
+    // Render 2 input button 4 calculater button which is them subtract,sum,div,multiply 
+    // when the user click the buttom the button will calculate input values and show the result on the screen like alert.
+    //10) ekrana 2 input ve hesap butonlarını koy (çarpma bölme çıkarma ve toplama) hangi butona basarsa o işlemi yapıp alert olarak ekrana yazdır
+
+    function sum() {
+        let value1 = Number(document.getElementById('sayi1').value);
+        let value2 = Number(document.getElementById('sayi2').value);
+        let reslt = value1 + value2;
+
+        alert(reslt);
+    }
+    function sub() {
+        let value1 = Number(document.getElementById('sayi1').value);
+        let value2 = Number(document.getElementById('sayi2').value);
+        let reslt = value1 - value2;
+
+        alert(reslt);
+    }
+    function div() {
+        let value1 = Number(document.getElementById('sayi1').value);
+        let value2 = Number(document.getElementById('sayi2').value);
+        let reslt = value1 / value2;
+
+        alert(reslt);
+    }
+
+    function multiply() {
+        let value1 = Number(document.getElementById('sayi1').value);
+        let value2 = Number(document.getElementById('sayi2').value);
+        let reslt = value1 * value2;
+
+        alert(reslt);
+    }
+
+    // Put one table which has a min 5 rows, and put a button, when the button is pressed delete third row from the table.
+    //11) Ekrana bir table ve bir buton koy. ( en az 5 satırlı) Butona tıklandığında 3. satırı silsin
+
+    function deleteRow() {
+        let value = document.getElementById('country').deleteRow(3);
+    }
+
+    // Put a button, when the button is pressed change the width of button randomly with range 100 to 500.
+    //12) Ekrana bir buton koy. Butona her tıklandığında 100-500 arası rastgele bir width değerini kendine atasın ( js random!!)
+
+    function changeWidth() {
+        var val = Math.floor(Math.random() * 500) + 100;
+        document.getElementById("btn").style.width = val + "px";
+    }
+
+    //Put one input label and  a button,when the button is pressed change the  
+    //background color of body with input value.if input not valid throw a alert.
+    //13) Ekrana bir input bir buton koy. Butona tıkladığında inputtan aldığı renk değerini body background a atasın.
+    // eğer atama yapamazsa ekrana uyarı versin ***
+
+    function changeColor() {
+
+        let valu = document.getElementById('colorNo').value;
+        if (valu > 16777216 || valu < 0) {
+            alert("Color number is not valid.. Please enter the right range number of the colors.");
+        }
+        document.getElementById("body").style.backgroundColor = valu;
+    }
+
+    //Render three button,it will be disappeared the button which is the pressed when user click on the one of them .
+    //13) Ekrana 3 buton koy. Hangi butona tıklanırsa o buton kendini yoketsin (her butona ayrı ayrı onclikc function yazacaksın??, display none yapmak!)
+    function btnHide1() {
+        document.getElementById("btn1").style.display = "none";
+    }
+    function btnHide2() {
+        document.getElementById("btn2").style.display = "none";
+    }
+    function btnHide3() {
+        document.getElementById("btn3").style.display = "none";
+    }
+
+    //15) Ekrana bir buton 6 tane de label koy.Butona tıkladığında 1 ile 49 arasında rastgele 6 sayı 
+    //üretip bunları tek tek labellara yazsın. Sayısal loto programı ( aynı sayı olmamalı )
+    function number() {
+        var a = [];
+        for (i = 0; i < 6; i++) {
+            var val = Math.floor(Math.random() * 50) + 1;
+            a[i] = val;
+        }
+
+        document.getElementById("l1").innerHTML = a[0];
+        document.getElementById("l2").innerHTML = a[1];
+        document.getElementById("l3").innerHTML = a[2];
+        document.getElementById("l4").innerHTML = a[3];
+        document.getElementById("l5").innerHTML = a[4];
+        document.getElementById("l6").innerHTML = a[5];
+
+
+    }
+</script>
